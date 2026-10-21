@@ -29,9 +29,11 @@ El proyecto aplica el patrón de diseño **Page Object Model (POM)** y utiliza *
 ├── .gitignore               # Exclusión de archivos
 ├── playwright.config.ts    # Archivo de configuración general
 └── package.json            # Dependencias del proyecto
+```
 
 Instalación y Configuración
-Sigue estos pasos para clonar y ejecutar el proyecto en tu máquina local:
+
+Sigue estos pasos para clonar y ejecutar el proyecto en tu máquina local
 
 1. Clonar el repositorio
 Bash
