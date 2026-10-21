@@ -72,8 +72,10 @@ Ver el reporte HTML de la última ejecución:
 
 Bash
 npx playwright show-report
+```
 
-Características Clave del Proyecto
+## Características Clave del Proyecto
+
 Selectores Resilientes: Uso prioritario de getByRole y accesibilidad para evitar fallos por cambios en el DOM.
 
 Mantenibilidad: Separación clara entre la lógica de las páginas (POM) y los escenarios de prueba.
@@ -82,4 +84,3 @@ Auditoría Visual: Configuración de tiempos de ejecución legibles para facilit
 
 Contacto
 Email: manuelalejandromejiasaular@gmail.com
-```
