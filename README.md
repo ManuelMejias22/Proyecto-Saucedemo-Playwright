@@ -45,7 +45,8 @@ Bash
 npx playwright install
 
 Ejecución de Pruebas
-Puedes correr las pruebas de diferentes maneras según tus necesidades:
+
+Puedes correr las pruebas de diferentes maneras según tus necesidades
 
 Ejecutar en modo headless (por defecto):
 
