@@ -31,10 +31,11 @@ El proyecto aplica el patrón de diseño **Page Object Model (POM)** y utiliza *
 └── package.json            # Dependencias del proyecto
 ```
 
-Instalación y Configuración
+## Instalación y Configuración
 
 Sigue estos pasos para clonar y ejecutar el proyecto en tu máquina local
 
+```
 1. Clonar el repositorio
 Bash
 git clone [https://github.com/ManuelMejias22/Proyecto-Saucedemo-Playwright.git](https://github.com/ManuelMejias22/Proyecto-Saucedemo-Playwright.git)
@@ -45,9 +46,11 @@ npm install
 3. Instalar los navegadores de Playwright
 Bash
 npx playwright install
+```
 
-Ejecución de Pruebas
+## Ejecución de Pruebas
 
+```
 Puedes correr las pruebas de diferentes maneras según tus necesidades
 
 Ejecutar en modo headless (por defecto):
@@ -79,3 +82,4 @@ Auditoría Visual: Configuración de tiempos de ejecución legibles para facilit
 
 Contacto
 Email: manuelalejandromejiasaular@gmail.com
+```
