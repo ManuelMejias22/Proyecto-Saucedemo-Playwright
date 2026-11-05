@@ -20,22 +20,21 @@ El proyecto implementa una estrategia de prueba híbrida que abarca tanto **prue
 ##  Estructura del Proyecto
 
 ```text
-├── pages/                                   # Clases Page Object Model (POM)
-│   ├── LoginPage.ts                         # Localizadores y acciones de Autenticación
-│   ├── InventoryPage.ts                     # Localizadores y acciones del Catálogo
-│   ├── CartPage.ts                          # Localizadores y acciones del Carrito
-│   └── CheckoutPage.ts                      # Localizadores y acciones del Proceso de Pago
-├── tests/                                   # Suites de Pruebas
-│   ├── LoginSaucedemo.spec.ts               # Pruebas atómicas de Autenticación
-│   ├── CartSaucedemo.spec.ts                # Pruebas atómicas de manipulación del Carrito
-│   ├── Cart-ItemsSaucedemo.spec.ts          # Pruebas atómicas de ítems específicos en Carrito
-│   ├── CheckoutSaucedemo.spec.ts            # Pruebas atómicas de navegación hacia el Checkout
-│   ├── Complete-ShippingSaucedemo.spec.ts   # Pruebas atómicas de datos de envío y confirmación
-│   ├── SortSaucedemo.spec.ts                # Pruebas atómicas de ordenamiento de productos
-│   └── E2E-SauceDemo.spec.ts                # Flujo completo E2E de compra
-├── playwright.config.ts                     # Configuración global de Playwright
-├── package.json                             # Dependencias y scripts del proyecto
-└── README.md                                # Documentación del proyecto
+├── pages/                                    # Clases Page Object Model (POM)
+│   ├── LoginPage.ts                          # Selectores y métodos de inicio de sesión
+│   ├── CatalogPage.ts                        # Selectores y acciones de la vista de productos
+│   └── CheckoutPage.ts                       # Selectores y lógica del carrito y proceso de compra
+├── tests/                                    # Suites de Pruebas
+│   ├── LoginSaucedemo.spec.ts                # Pruebas atómicas de Inicio de Sesión
+│   ├── CartSaucedemo.spec.ts                 # Pruebas atómicas de manipulación del Carrito
+│   ├── Cart-ItemsSaucedemo.spec.ts           # Pruebas atómicas de ítems específicos en Carrito
+│   ├── CheckoutSaucedemo.spec.ts             # Pruebas atómicas de navegación hacia el Checkout
+│   ├── Complete-ShippingSaucedemo.spec.ts    # Pruebas atómicas de datos de envío y confirmación
+│   ├── SortSaucedemo.spec.ts                 # Pruebas atómicas de ordenamiento de productos
+│   └── E2E-SauceDemo.spec.ts                 # Flujo completo E2E de compra
+├── playwright.config.ts                      # Configuración global de Playwright
+├── package.json                              # Dependencias y scripts del proyecto
+└── README.md                                 # Documentación del proyecto
 ```
 
 ## Instalación y Configuración
