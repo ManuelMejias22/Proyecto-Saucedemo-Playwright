@@ -1,3 +1,5 @@
+// TC-007 E2E Saucedemo
+
 import { test } from '@playwright/test';
 import { LoginPage } from '../pages/LoginPage';
 import { CatalogPage } from '../pages/CatalogPage';
@@ -35,3 +37,5 @@ test.describe('Flujo completo de compra en SauceDemo', () => {
   });
 
 });
+
+
