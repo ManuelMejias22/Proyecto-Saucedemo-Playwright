@@ -2,9 +2,9 @@
 
 ##  Descripción del Proyecto
 
-Este repositorio contiene una suite de pruebas automatizadas End-to-End (E2E) para validar el flujo principal de compra en la plataforma e-commerce **SauceDemo**. 
+Este repositorio contiene un framework de automatización de pruebas para la plataforma de e-commerce [SauceDemo](https://www.saucedemo.com/), diseñado bajo el patrón **Page Object Model (POM)** en **Playwright** con **TypeScript**.
 
-El proyecto aplica el patrón de diseño **Page Object Model (POM)** y utiliza **TypeScript** con **Playwright** para garantizar un código modular, legible y fácil de mantener.
+El proyecto implementa una estrategia de prueba híbrida que abarca tanto **pruebas atómicas e independientes** para la validación rápida y aislada de componentes, como una **suite End-to-End (E2E)** para verificar el flujo crítico completo de compra.
 
 ---
 
@@ -20,15 +20,22 @@ El proyecto aplica el patrón de diseño **Page Object Model (POM)** y utiliza *
 ##  Estructura del Proyecto
 
 ```text
-├── pages/
-│   ├── CatalogPage.ts      # Selectores y acciones de la vista de productos
-│   ├── CheckoutPage.ts     # Selectores y lógica del carrito y proceso de compra
-│   └── LoginPage.ts        # Selectores y métodos de inicio de sesión
-├── tests/
-│   └── Flujo-completo-de-compra-en-SauceDemo.spec.ts  # Test del flujo completo de compra
-├── .gitignore               # Exclusión de archivos
-├── playwright.config.ts    # Archivo de configuración general
-└── package.json            # Dependencias del proyecto
+├── pages/                                   # Clases Page Object Model (POM)
+│   ├── LoginPage.ts                         # Localizadores y acciones de Autenticación
+│   ├── InventoryPage.ts                     # Localizadores y acciones del Catálogo
+│   ├── CartPage.ts                          # Localizadores y acciones del Carrito
+│   └── CheckoutPage.ts                      # Localizadores y acciones del Proceso de Pago
+├── tests/                                   # Suites de Pruebas
+│   ├── LoginSaucedemo.spec.ts               # Pruebas atómicas de Autenticación
+│   ├── CartSaucedemo.spec.ts                # Pruebas atómicas de manipulación del Carrito
+│   ├── Cart-ItemsSaucedemo.spec.ts          # Pruebas atómicas de ítems específicos en Carrito
+│   ├── CheckoutSaucedemo.spec.ts            # Pruebas atómicas de navegación hacia el Checkout
+│   ├── Complete-ShippingSaucedemo.spec.ts   # Pruebas atómicas de datos de envío y confirmación
+│   ├── SortSaucedemo.spec.ts                # Pruebas atómicas de ordenamiento de productos
+│   └── E2E-SauceDemo.spec.ts                # Flujo completo E2E de compra
+├── playwright.config.ts                     # Configuración global de Playwright
+├── package.json                             # Dependencias y scripts del proyecto
+└── README.md                                # Documentación del proyecto
 ```
 
 ## Instalación y Configuración
@@ -74,13 +81,15 @@ Bash
 npx playwright show-report
 ```
 
-## Características Clave del Proyecto
+## Características del Projecto
 
-Selectores Resilientes: Uso prioritario de getByRole y accesibilidad para evitar fallos por cambios en el DOM.
+* **Arquitectura Page Object Model (POM):** Separación clara entre la lógica de interfaz/interacción (`pages/`) y la lógica de pruebas (`tests/`).
 
-Mantenibilidad: Separación clara entre la lógica de las páginas (POM) y los escenarios de prueba.
+* **Suite de Pruebas Atómicas:** Casos de prueba modulares e independientes (`Login`, `Cart`, `Checkout`, `Shipping`, `Sort`) diseñados para aislar fallos de forma rápida y permitir ejecuciones en paralelo eficaces.
 
-Auditoría Visual: Configuración de tiempos de ejecución legibles para facilitar el seguimiento visual de la automatización.
+* **Flujo Crítico End-to-End (E2E):** Prueba integral de punta a punta (`E2E-SauceDemo.spec.ts`) que simula la experiencia real de un usuario realizando una compra completa.
 
-Contacto
+* **Assertions Robustos y Locators Resilientes:** Uso prioritario de locators orientados a accesibilidad (`getByRole`, `getByTestId`) y validaciones explícitas de estado.
+
+**Contacto:**
 Email: manuelalejandromejiasaular@gmail.com
